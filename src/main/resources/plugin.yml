@@ -1,0 +1,12 @@
+name: message-printer
+version: '${project.version}'
+main: me.syncwrld.messageprinter.MessagePrinterEngine
+api-version: '1.13'
+
+commands:
+  printer:
+    description: 'Prints a message'
+    arguments:
+      - message:
+          description: 'The message to print'
+          required: true

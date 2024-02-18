@@ -1,0 +1,11 @@
+me\syncwrld\messageprinter\command\PrintCommand.class
+me\syncwrld\messageprinter\registry\PrintableMessageLoader.class
+me\syncwrld\messageprinter\api\impl\SpigotPrinterApiImpl.class
+me\syncwrld\messageprinter\CommandUtil.class
+me\syncwrld\messageprinter\MessagePrinterEngine.class
+me\syncwrld\messageprinter\model\PrintableMessage.class
+me\syncwrld\messageprinter\api\PrinterApiHolder.class
+me\syncwrld\messageprinter\api\SpigotPrinterAPI.class
+me\syncwrld\messageprinter\command\tab\PrintCommandTab.class
+me\syncwrld\messageprinter\listeners\PredefinedActionListener.class
+me\syncwrld\messageprinter\registry\Loader.class
