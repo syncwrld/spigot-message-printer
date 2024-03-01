@@ -14,6 +14,7 @@ import me.syncwrld.messageprinter.registry.PrintableMessageLoader;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
 
 public class SpigotPrinterApiImpl implements SpigotPrinterAPI {
@@ -169,6 +170,11 @@ public class SpigotPrinterApiImpl implements SpigotPrinterAPI {
   @Override
   public List<PrintableMessage> getRegistered() {
     return this.messageLoader.getRegistered();
+  }
+
+  @Override
+  public JavaPlugin getRegistor() {
+    return printerEngine;
   }
 
   /**

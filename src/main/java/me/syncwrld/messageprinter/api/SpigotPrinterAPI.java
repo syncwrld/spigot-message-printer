@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import me.syncwrld.messageprinter.model.PrintableMessage;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public interface SpigotPrinterAPI {
   /**
@@ -77,4 +78,6 @@ public interface SpigotPrinterAPI {
    * @return the list of messages
    */
   List<PrintableMessage> getRegistered();
+
+  JavaPlugin getRegistor();
 }

@@ -1,5 +1,6 @@
 package me.syncwrld.messageprinter;
 
+import co.aikar.commands.PaperCommandManager;
 import com.google.common.base.Stopwatch;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -28,9 +29,8 @@ public final class MessagePrinterEngine extends JavaPlugin {
     PrinterApiHolder.API = new SpigotPrinterApiImpl(this, this.messageLoader);
 
     PredefinedActionListener.register(this);
-    PluginCommand printerCommand = this.getCommand("printer");
-    printerCommand.setExecutor(new PrintCommand());
-    printerCommand.setTabCompleter(new PrintCommandTab());
+    PaperCommandManager paperCommandManager = new PaperCommandManager(this);
+    paperCommandManager.registerCommand(new PrintCommand(this));
 
     this.log("&aTotally started, enable phase took " + enableWatcher.stop() + " to complete.");
   }
