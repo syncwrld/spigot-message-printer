@@ -7,10 +7,9 @@ import lombok.Getter;
 import me.syncwrld.messageprinter.api.PrinterApiHolder;
 import me.syncwrld.messageprinter.api.impl.SpigotPrinterApiImpl;
 import me.syncwrld.messageprinter.command.PrintCommand;
-import me.syncwrld.messageprinter.command.tab.PrintCommandTab;
+import me.syncwrld.messageprinter.listeners.NotifyUpdateListener;
 import me.syncwrld.messageprinter.listeners.PredefinedActionListener;
 import me.syncwrld.messageprinter.registry.PrintableMessageLoader;
-import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 @Getter(AccessLevel.PUBLIC)
@@ -29,6 +28,8 @@ public final class MessagePrinterEngine extends JavaPlugin {
     PrinterApiHolder.API = new SpigotPrinterApiImpl(this, this.messageLoader);
 
     PredefinedActionListener.register(this);
+    NotifyUpdateListener.register(this);
+
     PaperCommandManager paperCommandManager = new PaperCommandManager(this);
     paperCommandManager.registerCommand(new PrintCommand(this));
 
