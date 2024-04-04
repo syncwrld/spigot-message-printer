@@ -1,7 +1,9 @@
 name: message-printer
-version: '${project.version}'
+version: '1.0'
 main: me.syncwrld.messageprinter.MessagePrinterEngine
 api-version: '1.13'
+
+author: 'syncwrld'
 
 commands:
   printer:
