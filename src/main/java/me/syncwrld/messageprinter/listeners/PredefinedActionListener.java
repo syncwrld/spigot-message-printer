@@ -47,7 +47,7 @@ public class PredefinedActionListener implements Listener {
 
     @EventHandler
     public void whenPlayerDisconnect(PlayerQuitEvent event) {
-        if (this.connectMessage != null) {
+        if (this.disconnectMessage != null) {
             api.getRegisteredById(disconnectMessage)
                     .ifPresent(
                             message -> {
